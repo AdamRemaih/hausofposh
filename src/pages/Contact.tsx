@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -269,6 +269,94 @@ const Contact = () => {
                 </Button>
               </form>
             </Form>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Info & Socials */}
+      <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-serif font-bold text-center mb-12"
+          >
+            Get in Touch
+          </motion.h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+            {/* Phone */}
+            <motion.a
+              href="tel:+14036907462"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-4 p-6 bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <div className="p-3 rounded-full bg-primary/20 group-hover:bg-primary/30 transition-colors">
+                <Phone className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Phone</p>
+                <p className="font-semibold text-foreground">(403) 690-7462</p>
+              </div>
+            </motion.a>
+
+            {/* Email */}
+            <motion.a
+              href="mailto:hausofposhyyc@gmail.com"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-4 p-6 bg-background rounded-2xl shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <div className="p-3 rounded-full bg-primary/20 group-hover:bg-primary/30 transition-colors">
+                <Mail className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Email</p>
+                <p className="font-semibold text-foreground">hausofposhyyc@gmail.com</p>
+              </div>
+            </motion.a>
+          </div>
+
+          {/* Follow Us */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-serif font-semibold mb-6">Follow Us</h3>
+            <div className="flex justify-center gap-6">
+              <motion.a
+                href="https://www.instagram.com/hausofposhyyc/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-4 bg-background rounded-full shadow-md hover:shadow-lg transition-shadow group"
+              >
+                <Instagram className="h-7 w-7 text-primary group-hover:text-primary/80 transition-colors" />
+              </motion.a>
+              <motion.a
+                href="https://www.facebook.com/hausofposhyyc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15, rotate: -5 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-4 bg-background rounded-full shadow-md hover:shadow-lg transition-shadow group"
+              >
+                <Facebook className="h-7 w-7 text-primary group-hover:text-primary/80 transition-colors" />
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </section>
