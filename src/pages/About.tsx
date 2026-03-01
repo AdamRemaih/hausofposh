@@ -5,26 +5,26 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-serif font-bold mb-4"
-          >
-            About Us
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-muted-foreground max-w-2xl mx-auto text-lg"
-          >
-            The story behind Haus of Posh
-          </motion.p>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* About Content */}
       <section className="py-20">
@@ -35,21 +35,21 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="shrink-0"
-            >
+              className="shrink-0">
+
               <img
                 src={cofounderImg}
                 alt="Rima – Founder & Creative Director of Haus of Posh"
-                className="w-80 md:w-96 object-cover rounded-lg shadow-lg"
-              />
+                className="w-80 md:w-96 object-cover rounded-lg shadow-lg" />
+
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+              transition={{ duration: 0.6, delay: 0.2 }}>
+
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-2">Meet Rima</h2>
               <p className="text-primary font-medium text-lg mb-6">Founder & Creative Director of Haus of Posh</p>
 
@@ -76,8 +76,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default About;
