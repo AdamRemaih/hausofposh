@@ -40,7 +40,7 @@ const About = () => {
               <img
                 src={cofounderImg}
                 alt="Rima – Founder & Creative Director of Haus of Posh"
-                className="w-64 h-80 object-cover rounded-lg shadow-lg"
+                className="w-80 md:w-96 object-cover rounded-lg shadow-lg"
               />
             </motion.div>
 
