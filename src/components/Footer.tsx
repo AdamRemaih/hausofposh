@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
 
+const footerLinks = [
+  { label: "Home", to: "/" },
+  { label: "Services", to: "/services" },
+  { label: "Gallery", to: "/gallery" },
+  { label: "Rentals", to: "/rentals" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -9,13 +18,13 @@ const Footer = () => {
             HAUS <span className="text-primary">of</span> POSH
           </Link>
           <nav className="flex flex-wrap justify-center gap-6">
-            {["Home", "Services", "Gallery", "Rentals", "About & Contact"].map((label) => (
+            {footerLinks.map((link) => (
               <Link
-                key={label}
-                to={label === "Home" ? "/" : label === "About & Contact" ? "/about-contact" : `/${label.toLowerCase()}`}
+                key={link.label}
+                to={link.to}
                 className="text-sm text-background/70 hover:text-primary transition-colors tracking-wide uppercase"
               >
-                {label}
+                {link.label}
               </Link>
             ))}
           </nav>

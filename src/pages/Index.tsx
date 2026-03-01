@@ -162,7 +162,7 @@ const Index = () => {
             <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8 text-lg">
               Every detail matters. Let us bring your vision to life with elegance and style.
             </p>
-            <Link to="/about-contact">
+            <Link to="/contact">
               <Button
                 size="lg"
                 variant="outline"

@@ -13,9 +13,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 10% 15%;
 
-    /* Elegant Pink */
-    --primary: 346 60% 65%;
-    --primary-foreground: 0 0% 100%;
+    /* Soft Pink #FFC0CB */
+    --primary: 350 100% 88%;
+    --primary-foreground: 20 10% 15%;
 
     /* Warm Cream #EADDCA */
     --secondary: 36 40% 86%;
@@ -32,18 +32,18 @@
 
     --border: 36 20% 88%;
     --input: 36 20% 88%;
-    --ring: 346 60% 65%;
+    --ring: 350 100% 88%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 346 60% 65%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 350 100% 88%;
+    --sidebar-primary-foreground: 20 10% 15%;
     --sidebar-accent: 36 40% 86%;
     --sidebar-accent-foreground: 20 10% 15%;
     --sidebar-border: 36 20% 88%;
-    --sidebar-ring: 346 60% 65%;
+    --sidebar-ring: 350 100% 88%;
   }
 }
 
