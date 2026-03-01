@@ -9,7 +9,8 @@ const navLinks = [
   { label: "Services", to: "/services" },
   { label: "Gallery", to: "/gallery" },
   { label: "Rentals", to: "/rentals" },
-  { label: "About & Contact", to: "/about-contact" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
 
         {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <Link to="/about-contact">
+          <Link to="/contact">
             <Button className="hidden sm:inline-flex rounded-full px-6 font-sans text-sm tracking-wide">
               Book a Consultation
             </Button>
@@ -74,7 +75,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="/about-contact" onClick={() => setMobileOpen(false)}>
+            <Link to="/contact" onClick={() => setMobileOpen(false)}>
               <Button className="rounded-full px-6 font-sans text-sm tracking-wide mt-2">
                 Book a Consultation
               </Button>

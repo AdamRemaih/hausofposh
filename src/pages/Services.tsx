@@ -117,7 +117,7 @@ const Services = () => {
                       View Gallery
                     </Button>
                   </Link>
-                  <Link to="/about-contact">
+                  <Link to="/contact">
                     <Button className="rounded-full px-6 font-sans tracking-wide">
                       Book a Consultation
                     </Button>
