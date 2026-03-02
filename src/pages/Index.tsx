@@ -2,14 +2,20 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroVideo from "@/assets/hero-video.mp4";
+import serviceWeddings from "@/assets/service-weddings.jpg";
+import serviceCatering from "@/assets/service-catering.jpg";
+import serviceChristmas from "@/assets/service-christmas.jpg";
+import serviceBabyShowers from "@/assets/service-baby-showers.jpg";
+import serviceGraduations from "@/assets/service-graduations.jpg";
+import serviceBirthdays from "@/assets/service-birthdays.jpg";
 
 const services = [
-  { name: "Weddings", description: "Breathtaking wedding decor that tells your love story.", icon: "💍" },
-  { name: "Catering", description: "Elegant table settings and catering presentations.", icon: "🍽️" },
-  { name: "Christmas", description: "Festive holiday decor that sparkles and delights.", icon: "🎄" },
-  { name: "Baby Showers & Gender Reveal", description: "Sweet and memorable celebration setups.", icon: "🍼" },
-  { name: "Graduations", description: "Celebrate achievements with stunning decor.", icon: "🎓" },
-  { name: "Birthdays", description: "Unforgettable birthday party transformations.", icon: "🎂" },
+  { name: "Weddings", description: "Breathtaking wedding decor that tells your love story.", image: serviceWeddings, slug: "weddings" },
+  { name: "Catering", description: "Elegant table settings and catering presentations.", image: serviceCatering, slug: "catering" },
+  { name: "Christmas", description: "Festive holiday decor that sparkles and delights.", image: serviceChristmas, slug: "christmas" },
+  { name: "Baby Showers & Gender Reveal", description: "Sweet and memorable celebration setups.", image: serviceBabyShowers, slug: "baby-showers" },
+  { name: "Graduations", description: "Celebrate achievements with stunning decor.", image: serviceGraduations, slug: "graduations" },
+  { name: "Birthdays", description: "Unforgettable birthday party transformations.", image: serviceBirthdays, slug: "birthdays" },
 ];
 
 const fadeUp = {
@@ -95,14 +101,18 @@ const Index = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="bg-background rounded-lg p-8 text-center shadow-sm hover:shadow-md transition-shadow border border-border group cursor-pointer"
+                className="bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-border group cursor-pointer"
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-serif font-semibold mb-3">{service.name}</h3>
-                <p className="text-muted-foreground text-sm mb-6">{service.description}</p>
-                <Link to="/services" className="text-primary text-sm font-medium hover:underline tracking-wide uppercase">
-                  Learn More →
-                </Link>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-serif font-semibold mb-3">{service.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-6">{service.description}</p>
+                  <Link to={`/services#${service.slug}`} className="text-primary text-sm font-medium hover:underline tracking-wide uppercase">
+                    View Service →
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
