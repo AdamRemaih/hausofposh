@@ -93,6 +93,7 @@ const Services = () => {
           {services.map((service, i) => (
             <motion.div
               key={service.name}
+              id={service.filter}
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
