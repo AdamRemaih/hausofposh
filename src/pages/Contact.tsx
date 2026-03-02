@@ -302,7 +302,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Phone</p>
-                <p className="text-foreground tracking-wide font-mono text-sm font-medium">(403) 690 7462</p>
+                <p className="text-foreground tracking-wide font-mono text-sm font-semibold">(403) 690 - 7462</p>
               </div>
             </motion.a>
 
