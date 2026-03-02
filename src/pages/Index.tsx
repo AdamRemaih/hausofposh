@@ -8,6 +8,17 @@ import serviceChristmas from "@/assets/service-christmas.jpg";
 import serviceBabyShowers from "@/assets/service-baby-showers.jpg";
 import serviceGraduations from "@/assets/service-graduations.jpg";
 import serviceBirthdays from "@/assets/service-birthdays.jpg";
+import ourwork1 from "@/assets/ourwork-1.jpg";
+import ourwork2 from "@/assets/ourwork-2.jpg";
+import ourwork3 from "@/assets/ourwork-3.jpg";
+import ourwork4 from "@/assets/ourwork-4.jpg";
+
+const ourWorkImages = [
+  { src: ourwork1, alt: "Elegant wedding table setup with floral centerpiece" },
+  { src: ourwork2, alt: "Wedding sweetheart table with floral arch" },
+  { src: ourwork3, alt: "Luxurious floral arrangement with candles" },
+  { src: ourwork4, alt: "Gold place setting with invitation details" },
+];
 
 const services = [
   { name: "Weddings", description: "Breathtaking wedding decor that tells your love story.", image: serviceWeddings, slug: "weddings" },
@@ -135,7 +146,7 @@ const Index = () => {
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((n) => (
+            {ourWorkImages.map((img, n) => (
               <motion.div
                 key={n}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -144,9 +155,7 @@ const Index = () => {
                 transition={{ delay: n * 0.1, duration: 0.5 }}
                 className="aspect-[3/4] bg-secondary rounded-lg overflow-hidden group"
               >
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm italic">Photo {n}</span>
-                </div>
+                <img src={img.src} alt={img.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </motion.div>
             ))}
           </div>
