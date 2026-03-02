@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const services = [
   { name: "Weddings", description: "Breathtaking wedding decor that tells your love story.", icon: "💍" },
@@ -25,9 +25,12 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src={heroBg}
-          alt="Elegant event decoration"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-foreground/50" />
