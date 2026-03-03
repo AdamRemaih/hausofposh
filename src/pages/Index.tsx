@@ -5,7 +5,7 @@ import heroVideo from "@/assets/hero-video.mp4";
 import serviceWeddings from "@/assets/service-weddings.jpg";
 import serviceCatering from "@/assets/service-catering.jpg";
 import serviceChristmas from "@/assets/service-christmas.jpg";
-import serviceBabyShowers from "@/assets/service-baby-showers.jpg";
+import serviceBabyShowers from "@/assets/home-baby-showers.jpg";
 import serviceGraduations from "@/assets/service-graduations.jpg";
 import serviceBirthdays from "@/assets/service-birthdays.jpg";
 import ourwork1 from "@/assets/ourwork-1.jpg";
