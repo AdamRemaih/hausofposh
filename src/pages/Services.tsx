@@ -181,7 +181,7 @@ const Services = () => {
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="personal" className="border-none rounded-xl border px-5">
+                <AccordionItem value="personal" className="border rounded-xl px-5">
                   <AccordionTrigger className="hover:no-underline gap-3">
                     <span className="flex items-center gap-3 text-left">
                       <Gift className="h-5 w-5 text-primary shrink-0" />
