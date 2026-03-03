@@ -2,42 +2,55 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
+import serviceWeddings from "@/assets/service-weddings.jpg";
+import serviceCatering from "@/assets/service-catering.jpg";
+import serviceChristmas from "@/assets/service-christmas.jpg";
+import serviceBabyShowers from "@/assets/service-baby-showers.jpg";
+import serviceGraduations from "@/assets/service-graduations.jpg";
+import serviceBirthdays from "@/assets/service-birthdays.jpg";
+
 const services = [
   {
     name: "Weddings",
     description: "From intimate ceremonies to grand receptions, we craft breathtaking wedding decor that reflects your unique love story. Our designs feature luxurious floral arrangements, elegant drapery, and stunning tablescapes.",
     icon: "💍",
     filter: "weddings",
+    image: serviceWeddings,
   },
   {
     name: "Catering Presentations",
     description: "Elevate your dining experience with our sophisticated catering display designs. We create beautiful buffet setups, charger plate arrangements, and table styling that complement your culinary offerings.",
     icon: "🍽️",
     filter: "catering",
+    image: serviceCatering,
   },
   {
     name: "Christmas Events",
     description: "Transform your holiday gatherings into winter wonderlands. Our Christmas decor features festive centerpieces, twinkling lights, and elegant seasonal touches that capture the magic of the season.",
     icon: "🎄",
     filter: "christmas",
+    image: serviceChristmas,
   },
   {
     name: "Baby Showers & Gender Reveal",
     description: "Celebrate new beginnings with our charming and creative party setups. From sweet pastel themes to dramatic reveal moments, we make every baby celebration memorable.",
     icon: "🍼",
     filter: "baby-showers",
+    image: serviceBabyShowers,
   },
   {
     name: "Graduations",
     description: "Honor academic achievements with sophisticated graduation party decor. We create elegant backdrops, themed tablescapes, and celebration setups that mark this milestone in style.",
     icon: "🎓",
     filter: "graduations",
+    image: serviceGraduations,
   },
   {
     name: "Birthdays",
     description: "From milestone celebrations to themed extravaganzas, we design birthday party decor that wows. Balloon installations, custom backdrops, and curated details for every age.",
     icon: "🎂",
     filter: "birthdays",
+    image: serviceBirthdays,
   },
 ];
 
@@ -100,13 +113,18 @@ const Services = () => {
               viewport={{ once: true }}
               className={`flex flex-col md:flex-row items-center gap-12 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
             >
-              {/* Image placeholder */}
-              <div className="w-full md:w-1/2 aspect-[4/3] bg-secondary rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-6xl block mb-3">{service.icon}</span>
-                  <span className="text-muted-foreground text-sm italic">Service photo</span>
-                </div>
-              </div>
+              <motion.div
+                className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden group"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </motion.div>
 
               {/* Content */}
               <div className="w-full md:w-1/2">
