@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CalendarDays, Heart, Wine, Gift, Sparkles } from "lucide-react";
 
 import serviceWeddings from "@/assets/service-weddings.jpg";
 import serviceCatering from "@/assets/service-catering.jpg";
@@ -89,18 +91,132 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Packages Placeholder */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      {/* Packages */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-muted rounded-lg p-12 text-center"
+            className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-4xl font-serif font-bold mb-4">Our Packages</h2>
-            <p className="text-muted-foreground italic">Packages coming soon — stay tuned for our curated event decoration packages.</p>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Our Packages</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Professional coordination so you can be fully present on your special day.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="border border-border rounded-2xl overflow-hidden"
+          >
+            {/* Package Header */}
+            <div className="bg-secondary px-8 py-10 text-center">
+              <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Signature Package</p>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-3">Day-of Coordination</h3>
+              <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
+                We step in so you can step back and truly enjoy your celebration. Designed for couples who have planned their event but need a professional team to execute every detail flawlessly.
+              </p>
+            </div>
+
+            {/* Package Details Accordion */}
+            <div className="px-6 md:px-10 py-8">
+              <Accordion type="multiple" defaultValue={["pre-event", "wedding-day", "reception", "personal"]} className="space-y-2">
+                <AccordionItem value="pre-event" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <CalendarDays className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Pre-Event Preparation</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">1–2 Weeks Before</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Detailed wedding day timeline creation</li>
+                      <li>• Vendor confirmation & final logistics review</li>
+                      <li>• Timeline distribution to all vendors & bridal party</li>
+                      <li>• Final venue walkthrough (if required)</li>
+                      <li>• Floor plan & layout confirmation</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="wedding-day" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Heart className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Wedding Day Management</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Primary point of contact for all vendors</li>
+                      <li>• Oversee setup of décor, signage & personal items</li>
+                      <li>• Ceremony lineup & processional coordination</li>
+                      <li>• Cue music, photographer & key moments</li>
+                      <li>• Ensure timeline flows seamlessly</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="reception" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Wine className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Reception Oversight</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Coordinate grand entrance & formal dances</li>
+                      <li>• Manage speeches & program flow</li>
+                      <li>• Assist with cake cutting & special moments</li>
+                      <li>• Troubleshoot any unexpected issues discreetly</li>
+                      <li>• Support bridal party & immediate family</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="personal" className="border-none rounded-xl border px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Gift className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Personal Touch & Wrap-Up</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Set up guest book, card table & memory displays</li>
+                      <li>• Handle décor adjustments as needed</li>
+                      <li>• Secure gifts & personal items at end of night</li>
+                      <li>• Final venue check before departure</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            {/* Why Choose Us + CTA */}
+            <div className="bg-secondary/50 px-8 py-10 text-center space-y-6">
+              <div className="flex items-center justify-center gap-2 text-primary">
+                <Sparkles className="h-4 w-4" />
+                <p className="text-sm uppercase tracking-[0.15em] font-medium">Why Choose Haus of Posh?</p>
+                <Sparkles className="h-4 w-4" />
+              </div>
+              <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
+                We specialize in elegant, culturally rich celebrations — including Lebanese and multicultural weddings — and understand the importance of family, tradition, and seamless flow.
+              </p>
+              <p className="font-serif text-lg italic">You celebrate. We coordinate.</p>
+              <Link to="/contact">
+                <Button className="rounded-full px-8 mt-2 font-sans tracking-wide">
+                  Book a Consultation
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
