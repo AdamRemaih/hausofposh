@@ -8,9 +8,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// Christmas rental images
+import blackReindeerProps from "@/assets/rentals/christmas/black-reindeer-props.jpg";
+import blackSled from "@/assets/rentals/christmas/black-sled.jpg";
+import candyCaneProp from "@/assets/rentals/christmas/candy-cane-prop.jpg";
+import christmasBench from "@/assets/rentals/christmas/christmas-bench.jpg";
+import christmasCartProp from "@/assets/rentals/christmas/christmas-cart-prop.jpg";
+import christmasGift from "@/assets/rentals/christmas/christmas-gift.jpg";
+import christmasSled from "@/assets/rentals/christmas/christmas-sled.jpg";
+import christmasBackdrop from "@/assets/rentals/christmas/christmas-backdrop.jpg";
+import christmasSmallGift from "@/assets/rentals/christmas/christmas-small-gift.jpg";
+import gingerbreadTree from "@/assets/rentals/christmas/gingerbread-tree.jpg";
+
 interface RentalItem {
   name: string;
   price: string;
+  image?: string;
 }
 
 interface SubCategory {
@@ -44,7 +57,18 @@ const rentalCategories: Category[] = [
   },
   {
     name: "Christmas",
-    items: [{ name: "Christmas Centre Piece", price: "From $40" }, { name: "Holiday Table Setup", price: "From $90" }],
+    items: [
+      { name: "Black Reindeer Props", price: "From $45", image: blackReindeerProps },
+      { name: "Black Sled", price: "From $65", image: blackSled },
+      { name: "Candy Cane Prop", price: "From $35", image: candyCaneProp },
+      { name: "Merry Christmas Bench", price: "From $75", image: christmasBench },
+      { name: "Christmas Cart Prop", price: "From $90", image: christmasCartProp },
+      { name: "Christmas Gift Display", price: "From $55", image: christmasGift },
+      { name: "Red Christmas Sled", price: "From $70", image: christmasSled },
+      { name: "Christmas Floral Backdrop", price: "From $200", image: christmasBackdrop },
+      { name: "Stacked Gift Display", price: "From $60", image: christmasSmallGift },
+      { name: "Gingerbread Tree", price: "From $50", image: gingerbreadTree },
+    ],
   },
   {
     name: "Birthdays",
@@ -69,8 +93,12 @@ const rentalCategories: Category[] = [
 
 const RentalCard = ({ item }: { item: RentalItem }) => (
   <div className="bg-background rounded-lg border border-border overflow-hidden group hover:shadow-md transition-shadow">
-    <div className="aspect-square bg-secondary flex items-center justify-center">
-      <span className="text-muted-foreground text-xs italic">Photo</span>
+    <div className="aspect-square bg-secondary flex items-center justify-center overflow-hidden">
+      {item.image ? (
+        <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      ) : (
+        <span className="text-muted-foreground text-xs italic">Photo</span>
+      )}
     </div>
     <div className="p-4">
       <h4 className="font-medium text-sm mb-1">{item.name}</h4>
