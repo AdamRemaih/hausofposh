@@ -28,6 +28,18 @@ import smallRedSled from "@/assets/rentals/christmas/small-red-sled.jpg";
 import welcomeSantaSign from "@/assets/rentals/christmas/welcome-santa-sign.jpg";
 import whiteNutcracker from "@/assets/rentals/christmas/white-nutcracker.jpg";
 
+// Birthday rental images
+import blueRabbitProp from "@/assets/rentals/birthdays/blue-rabbit-prop.jpg";
+import chestProp from "@/assets/rentals/birthdays/chest-prop.jpg";
+import donutProp from "@/assets/rentals/birthdays/donut-prop.jpg";
+import gingerbreadProp from "@/assets/rentals/birthdays/gingerbread-prop.jpg";
+import icecreamProp from "@/assets/rentals/birthdays/icecream-prop.jpg";
+import icecreamStool from "@/assets/rentals/birthdays/icecream-stool.jpg";
+import macaroonProp from "@/assets/rentals/birthdays/macaroon-prop.jpg";
+import mushroomProps from "@/assets/rentals/birthdays/mushroom-props.jpg";
+import pinkRabbitProp from "@/assets/rentals/birthdays/pink-rabbit-prop.jpg";
+import sheepProps from "@/assets/rentals/birthdays/sheep-props.jpg";
+
 interface RentalItem {
   name: string;
   price: string;
@@ -91,6 +103,18 @@ const rentalCategories: Category[] = [
     subcategories: [
       { name: "Balloons", items: [{ name: "Balloon Arch", price: "From $80" }, { name: "Balloon Bouquet", price: "From $25" }] },
       { name: "Backdrops", items: [{ name: "Birthday Backdrop", price: "From $100" }] },
+      { name: "Props", items: [
+        { name: "Blue Rabbit Prop", price: "From $55", image: blueRabbitProp },
+        { name: "Treasure Chest Prop", price: "From $70", image: chestProp },
+        { name: "Donut Stack Prop", price: "From $65", image: donutProp },
+        { name: "Gingerbread Girl Prop", price: "From $60", image: gingerbreadProp },
+        { name: "Ice Cream Sandwich Prop", price: "From $75", image: icecreamProp },
+        { name: "Ice Cream Popsicle Stool", price: "From $50", image: icecreamStool },
+        { name: "Macaroon Tower Prop", price: "From $65", image: macaroonProp },
+        { name: "Mushroom Props Set", price: "From $90", image: mushroomProps },
+        { name: "Pink Rabbit Prop", price: "From $55", image: pinkRabbitProp },
+        { name: "Sheep Props Set", price: "From $80", image: sheepProps },
+      ] },
     ],
   },
   {
