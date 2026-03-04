@@ -19,6 +19,14 @@ import christmasSled from "@/assets/rentals/christmas/christmas-sled.jpg";
 import christmasBackdrop from "@/assets/rentals/christmas/christmas-backdrop.jpg";
 import christmasSmallGift from "@/assets/rentals/christmas/christmas-small-gift.jpg";
 import gingerbreadTree from "@/assets/rentals/christmas/gingerbread-tree.jpg";
+import nutcrackerMan from "@/assets/rentals/christmas/nutcracker-man.jpg";
+import christmasOrnament from "@/assets/rentals/christmas/christmas-ornament.jpg";
+import redGoldThrone from "@/assets/rentals/christmas/red-gold-throne.jpg";
+import santaLetterBox from "@/assets/rentals/christmas/santa-letter-box.jpg";
+import santaBakerProp from "@/assets/rentals/christmas/santa-baker-prop.jpg";
+import smallRedSled from "@/assets/rentals/christmas/small-red-sled.jpg";
+import welcomeSantaSign from "@/assets/rentals/christmas/welcome-santa-sign.jpg";
+import whiteNutcracker from "@/assets/rentals/christmas/white-nutcracker.jpg";
 
 interface RentalItem {
   name: string;
@@ -68,6 +76,14 @@ const rentalCategories: Category[] = [
       { name: "Christmas Floral Backdrop", price: "From $200", image: christmasBackdrop },
       { name: "Stacked Gift Display", price: "From $60", image: christmasSmallGift },
       { name: "Gingerbread Tree", price: "From $50", image: gingerbreadTree },
+      { name: "Nutcracker King Prop", price: "From $85", image: nutcrackerMan },
+      { name: "Giant Christmas Ornament", price: "From $45", image: christmasOrnament },
+      { name: "Red & Gold Throne Chair", price: "From $150", image: redGoldThrone },
+      { name: "Santa Letter Box", price: "From $40", image: santaLetterBox },
+      { name: "Santa Baker Prop", price: "From $95", image: santaBakerProp },
+      { name: "Small Red Sled", price: "From $45", image: smallRedSled },
+      { name: "Welcome Santa Sign", price: "From $35", image: welcomeSantaSign },
+      { name: "White Nutcracker Set", price: "From $120", image: whiteNutcracker },
     ],
   },
   {
