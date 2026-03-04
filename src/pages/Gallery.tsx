@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const filters = [
   "All",
-  "Weddings",
+  "Weddings & Engagements",
   "Catering",
   "Christmas",
   "Baby Showers",
