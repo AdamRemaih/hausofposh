@@ -28,6 +28,11 @@ import smallRedSled from "@/assets/rentals/christmas/small-red-sled.jpg";
 import welcomeSantaSign from "@/assets/rentals/christmas/welcome-santa-sign.jpg";
 import whiteNutcracker from "@/assets/rentals/christmas/white-nutcracker.jpg";
 
+// Wedding rental images
+import chairCoverBlack from "@/assets/rentals/weddings/chair-cover-black.jpg";
+import chairCoverWhite from "@/assets/rentals/weddings/chair-cover-white.jpg";
+import chairSash from "@/assets/rentals/weddings/chair-sash.jpg";
+
 // Birthday rental images
 import blueRabbitProp from "@/assets/rentals/birthdays/blue-rabbit-prop.jpg";
 import chestProp from "@/assets/rentals/birthdays/chest-prop.jpg";
@@ -64,7 +69,7 @@ const rentalCategories: Category[] = [
       { name: "Centre Pieces", items: [{ name: "Crystal Centre Piece", price: "From $50" }, { name: "Floral Centre Piece", price: "From $75" }] },
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
       { name: "Cake Tables", items: [{ name: "Elegant Cake Table Setup", price: "From $100" }] },
-      { name: "Chair Covers", items: [{ name: "Spandex Chair Cover", price: "From $3" }, { name: "Sash & Cover Set", price: "From $5" }] },
+      { name: "Chair Covers", items: [{ name: "Black Spandex Chair Cover", price: "From $3", image: chairCoverBlack }, { name: "White Spandex Chair Cover", price: "From $3", image: chairCoverWhite }, { name: "Chair Sash", price: "From $2", image: chairSash }] },
       { name: "Backdrops", items: [{ name: "Floral Backdrop", price: "From $200" }, { name: "Draped Backdrop", price: "From $150" }] },
       { name: "Table Runners", items: [{ name: "Satin Table Runner", price: "From $10" }] },
       { name: "Charger Plates", items: [{ name: "Gold Charger Plate", price: "From $3" }, { name: "Silver Charger Plate", price: "From $3" }] },
