@@ -32,6 +32,15 @@ import whiteNutcracker from "@/assets/rentals/christmas/white-nutcracker.jpg";
 import chairCoverBlack from "@/assets/rentals/weddings/chair-cover-black.jpg";
 import chairCoverWhite from "@/assets/rentals/weddings/chair-cover-white.jpg";
 import chairSash from "@/assets/rentals/weddings/chair-sash.jpg";
+import angledGoldWhiteChairs from "@/assets/rentals/weddings/angled-gold-white-chairs.jpg";
+import blackSilverChairs from "@/assets/rentals/weddings/black-silver-chairs.jpg";
+import blackSilverSet from "@/assets/rentals/weddings/black-silver-set.jpg";
+import greenLoveseat from "@/assets/rentals/weddings/green-loveseat.jpg";
+import pinkKidsLoveseat from "@/assets/rentals/weddings/pink-kids-loveseat.jpg";
+import redGoldLoveseat from "@/assets/rentals/weddings/red-gold-loveseat.jpg";
+import roundGoldWhiteChairs from "@/assets/rentals/weddings/round-gold-white-chairs.jpg";
+import scallopWhiteSet from "@/assets/rentals/weddings/scallop-white-set.jpg";
+import whiteVelvetLoveseat from "@/assets/rentals/weddings/white-velvet-loveseat.jpg";
 
 // Birthday rental images
 import blueRabbitProp from "@/assets/rentals/birthdays/blue-rabbit-prop.jpg";
@@ -70,6 +79,17 @@ const rentalCategories: Category[] = [
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
       { name: "Cake Tables", items: [{ name: "Elegant Cake Table Setup", price: "From $100" }] },
       { name: "Chair Covers", items: [{ name: "Black Spandex Chair Cover", price: "From $3", image: chairCoverBlack }, { name: "White Spandex Chair Cover", price: "From $3", image: chairCoverWhite }, { name: "Chair Sash", price: "From $2", image: chairSash }] },
+      { name: "Couches and Chairs", items: [
+        { name: "Angled Gold & White Chairs", price: "From $25", image: angledGoldWhiteChairs },
+        { name: "Black & Silver Chairs", price: "From $25", image: blackSilverChairs },
+        { name: "Black & Silver Set", price: "From $120", image: blackSilverSet },
+        { name: "Teal Velvet Loveseat", price: "From $85", image: greenLoveseat },
+        { name: "Pink Kids Loveseat", price: "From $65", image: pinkKidsLoveseat },
+        { name: "Red & Gold Chaise Lounge", price: "From $95", image: redGoldLoveseat },
+        { name: "Round Gold & White Chairs", price: "From $25", image: roundGoldWhiteChairs },
+        { name: "White Scallop Set", price: "From $130", image: scallopWhiteSet },
+        { name: "White Velvet Loveseat", price: "From $90", image: whiteVelvetLoveseat },
+      ] },
       { name: "Backdrops", items: [{ name: "Floral Backdrop", price: "From $200" }, { name: "Draped Backdrop", price: "From $150" }] },
       { name: "Table Runners", items: [{ name: "Satin Table Runner", price: "From $10" }] },
       { name: "Charger Plates", items: [{ name: "Gold Charger Plate", price: "From $3" }, { name: "Silver Charger Plate", price: "From $3" }] },
