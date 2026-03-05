@@ -36,6 +36,8 @@ import tallAcrylicCenterpiece from "@/assets/rentals/weddings/tall-acrylic-cente
 import tallGoldCenterpiece from "@/assets/rentals/weddings/tall-gold-centerpiece.jpg";
 import candelabraCenterpiece from "@/assets/rentals/weddings/candelabra-centerpiece.jpg";
 import roundGoldCenterpiece from "@/assets/rentals/weddings/round-gold-centerpiece.jpg";
+import cakeTables3Sizes from "@/assets/rentals/weddings/cake-tables-3-sizes.jpg";
+import vorageCakeTable from "@/assets/rentals/weddings/vorage-cake-table.jpg";
 import chairCoverBlack from "@/assets/rentals/weddings/chair-cover-black.jpg";
 import chairCoverWhite from "@/assets/rentals/weddings/chair-cover-white.jpg";
 import chairSash from "@/assets/rentals/weddings/chair-sash.jpg";
@@ -92,7 +94,10 @@ const rentalCategories: Category[] = [
         { name: "Round Gold Hoop Centre Piece", price: "From $55", image: roundGoldCenterpiece },
       ] },
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
-      { name: "Cake Tables", items: [{ name: "Elegant Cake Table Setup", price: "From $100" }] },
+      { name: "Cake Tables", items: [
+        { name: "Gold Twist Cake Table (3 Sizes)", price: "From $60", image: cakeTables3Sizes },
+        { name: "Vorage Gold Cake Table", price: "From $100", image: vorageCakeTable },
+      ] },
       { name: "Chair Covers", items: [{ name: "Black Spandex Chair Cover", price: "From $3", image: chairCoverBlack }, { name: "White Spandex Chair Cover", price: "From $3", image: chairCoverWhite }, { name: "Chair Sash", price: "From $2", image: chairSash }] },
       { name: "Couches and Chairs", items: [
         { name: "Angled Gold & White Chairs", price: "From $25", image: angledGoldWhiteChairs },
