@@ -38,6 +38,7 @@ import candelabraCenterpiece from "@/assets/rentals/weddings/candelabra-centerpi
 import roundGoldCenterpiece from "@/assets/rentals/weddings/round-gold-centerpiece.jpg";
 import floatingCandleTrio from "@/assets/rentals/weddings/floating-candle-trio.jpg";
 import candleWreathCenterpiece from "@/assets/rentals/weddings/candle-wreath-centerpiece.jpg";
+import tableChandelierCenterpiece from "@/assets/rentals/weddings/table-chandelier-centerpiece.jpg";
 import cakeTables3Sizes from "@/assets/rentals/weddings/cake-tables-3-sizes.jpg";
 import vorageCakeTable from "@/assets/rentals/weddings/vorage-cake-table.jpg";
 import chairCoverBlack from "@/assets/rentals/weddings/chair-cover-black.jpg";
@@ -96,6 +97,7 @@ const rentalCategories: Category[] = [
         { name: "Round Gold Hoop Centre Piece", price: "From $55", image: roundGoldCenterpiece },
         { name: "Floating Candle Trio with Greenery", price: "From $45", image: floatingCandleTrio },
         { name: "Candle Wreath Centre Piece", price: "From $55", image: candleWreathCenterpiece },
+        { name: "Table Chandelier Centre Piece", price: "From $65", image: tableChandelierCenterpiece },
       ] },
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
       { name: "Cake Tables", items: [
