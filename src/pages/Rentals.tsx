@@ -97,7 +97,7 @@ const rentalCategories: Category[] = [
         { name: "Round Gold Hoop Centre Piece", price: "From $55", image: roundGoldCenterpiece },
         { name: "Floating Candle Trio with Greenery", price: "From $45", image: floatingCandleTrio },
         { name: "Candle Wreath Centre Piece", price: "From $55", image: candleWreathCenterpiece },
-        { name: "Table Chandelier Centre Piece", price: "From $65", image: tableChandelierCenterpiece },
+        { name: "Gold Table Chandelier Centre Piece", price: "From $65", image: tableChandelierCenterpiece },
       ] },
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
       { name: "Cake Tables", items: [
