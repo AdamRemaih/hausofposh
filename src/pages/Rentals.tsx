@@ -29,6 +29,13 @@ import welcomeSantaSign from "@/assets/rentals/christmas/welcome-santa-sign.jpg"
 import whiteNutcracker from "@/assets/rentals/christmas/white-nutcracker.jpg";
 
 // Wedding rental images
+import goldCenterpiece from "@/assets/rentals/weddings/gold-centerpiece.jpg";
+import silverCenterpiece from "@/assets/rentals/weddings/silver-centerpiece.jpg";
+import tallBlackCenterpiece from "@/assets/rentals/weddings/tall-black-centerpiece.jpg";
+import tallAcrylicCenterpiece from "@/assets/rentals/weddings/tall-acrylic-centerpiece.jpg";
+import tallGoldCenterpiece from "@/assets/rentals/weddings/tall-gold-centerpiece.jpg";
+import candelabraCenterpiece from "@/assets/rentals/weddings/candelabra-centerpiece.jpg";
+import roundGoldCenterpiece from "@/assets/rentals/weddings/round-gold-centerpiece.jpg";
 import chairCoverBlack from "@/assets/rentals/weddings/chair-cover-black.jpg";
 import chairCoverWhite from "@/assets/rentals/weddings/chair-cover-white.jpg";
 import chairSash from "@/assets/rentals/weddings/chair-sash.jpg";
@@ -75,7 +82,15 @@ const rentalCategories: Category[] = [
   {
     name: "Weddings & Engagements",
     subcategories: [
-      { name: "Centre Pieces", items: [{ name: "Crystal Centre Piece", price: "From $50" }, { name: "Floral Centre Piece", price: "From $75" }] },
+      { name: "Centre Pieces", items: [
+        { name: "Gold Floral Centre Piece", price: "From $50", image: goldCenterpiece },
+        { name: "Silver Floral Centre Piece", price: "From $50", image: silverCenterpiece },
+        { name: "Tall Black Stand Centre Piece", price: "From $65", image: tallBlackCenterpiece },
+        { name: "Tall Acrylic Centre Piece", price: "From $70", image: tallAcrylicCenterpiece },
+        { name: "Tall Gold Stand Centre Piece", price: "From $75", image: tallGoldCenterpiece },
+        { name: "Gold Candelabra Centre Piece", price: "From $60", image: candelabraCenterpiece },
+        { name: "Round Gold Hoop Centre Piece", price: "From $55", image: roundGoldCenterpiece },
+      ] },
       { name: "Table Cloths", items: [{ name: "Satin Table Cloth", price: "From $25" }, { name: "Lace Table Cloth", price: "From $35" }] },
       { name: "Cake Tables", items: [{ name: "Elegant Cake Table Setup", price: "From $100" }] },
       { name: "Chair Covers", items: [{ name: "Black Spandex Chair Cover", price: "From $3", image: chairCoverBlack }, { name: "White Spandex Chair Cover", price: "From $3", image: chairCoverWhite }, { name: "Chair Sash", price: "From $2", image: chairSash }] },
