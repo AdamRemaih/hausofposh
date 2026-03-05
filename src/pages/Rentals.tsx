@@ -54,6 +54,10 @@ import roundGoldWhiteChairs from "@/assets/rentals/weddings/round-gold-white-cha
 import scallopWhiteSet from "@/assets/rentals/weddings/scallop-white-set.jpg";
 import whiteVelvetLoveseat from "@/assets/rentals/weddings/white-velvet-loveseat.jpg";
 
+// Ramadan rental images
+import ramadanLanterns from "@/assets/rentals/ramadan/ramadan-lanterns.jpg";
+import whiteLanterns from "@/assets/rentals/ramadan/white-lanterns.jpg";
+
 // Birthday rental images
 import blueRabbitProp from "@/assets/rentals/birthdays/blue-rabbit-prop.jpg";
 import chestProp from "@/assets/rentals/birthdays/chest-prop.jpg";
@@ -178,7 +182,12 @@ const rentalCategories: Category[] = [
   },
   {
     name: "Ramadan Decorations",
-    items: [{ name: "Ramadan Table Setup", price: "From $80" }, { name: "Crescent Moon Display", price: "From $60" }],
+    items: [
+      { name: "Ramadan Table Setup", price: "From $80" },
+      { name: "Crescent Moon Display", price: "From $60" },
+      { name: "Gold Ramadan Lanterns Set", price: "From $75", image: ramadanLanterns },
+      { name: "White Floral Lanterns Set", price: "From $85", image: whiteLanterns },
+    ],
   },
 ];
 
