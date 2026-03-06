@@ -69,6 +69,16 @@ import macaroonProp from "@/assets/rentals/birthdays/macaroon-prop.jpg";
 import mushroomProps from "@/assets/rentals/birthdays/mushroom-props.jpg";
 import pinkRabbitProp from "@/assets/rentals/birthdays/pink-rabbit-prop.jpg";
 import sheepProps from "@/assets/rentals/birthdays/sheep-props.jpg";
+import encantoBackdrop from "@/assets/rentals/birthdays/encanto-backdrop.jpg";
+import fairyGardenBackdrop from "@/assets/rentals/birthdays/fairy-garden-backdrop.jpg";
+import frozenBackdrop from "@/assets/rentals/birthdays/frozen-backdrop.jpg";
+import goldMoonBackdrop from "@/assets/rentals/birthdays/gold-moon-backdrop.jpg";
+import jurassicParkBackdrop from "@/assets/rentals/birthdays/jurassic-park-backdrop.jpg";
+import mermaidBackdrop from "@/assets/rentals/birthdays/mermaid-backdrop.jpg";
+import mickeyFriendsBackdrop from "@/assets/rentals/birthdays/mickey-friends-backdrop.jpg";
+import minnieMouseBackdrop from "@/assets/rentals/birthdays/minnie-mouse-backdrop.jpg";
+import princessJasmineBackdrop from "@/assets/rentals/birthdays/princess-jasmine-backdrop.jpg";
+import zooAnimalsBackdrop from "@/assets/rentals/birthdays/zoo-animals-backdrop.jpg";
 
 interface RentalItem {
   name: string;
@@ -157,7 +167,18 @@ const rentalCategories: Category[] = [
     name: "Birthdays",
     subcategories: [
       { name: "Balloons", items: [{ name: "Balloon Arch", price: "From $80" }, { name: "Balloon Bouquet", price: "From $25" }] },
-      { name: "Backdrops", items: [{ name: "Birthday Backdrop", price: "From $100" }] },
+      { name: "Backdrops", items: [
+        { name: "Disney Encanto Theme Backdrop", price: "From $100", image: encantoBackdrop },
+        { name: "Fairy Garden Backdrop", price: "From $100", image: fairyGardenBackdrop },
+        { name: "Frozen Theme Backdrop", price: "From $100", image: frozenBackdrop },
+        { name: "Gold Moon Theme Backdrop", price: "From $100", image: goldMoonBackdrop },
+        { name: "Jurassic Park Theme Backdrop", price: "From $100", image: jurassicParkBackdrop },
+        { name: "Mermaid Theme Backdrop", price: "From $100", image: mermaidBackdrop },
+        { name: "Mickey & Friends Theme Backdrop", price: "From $100", image: mickeyFriendsBackdrop },
+        { name: "Minnie Mouse Theme Backdrop", price: "From $100", image: minnieMouseBackdrop },
+        { name: "Princess Jasmine Theme Backdrop", price: "From $100", image: princessJasmineBackdrop },
+        { name: "Zoo Animals Theme Backdrop", price: "From $100", image: zooAnimalsBackdrop },
+      ] },
       { name: "Props", items: [
         { name: "Blue Rabbit Prop", price: "From $55", image: blueRabbitProp },
         { name: "Treasure Chest Prop", price: "From $70", image: chestProp },
