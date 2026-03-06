@@ -79,6 +79,9 @@ import mickeyFriendsBackdrop from "@/assets/rentals/birthdays/mickey-friends-bac
 import minnieMouseBackdrop from "@/assets/rentals/birthdays/minnie-mouse-backdrop.jpg";
 import princessJasmineBackdrop from "@/assets/rentals/birthdays/princess-jasmine-backdrop.jpg";
 import zooAnimalsBackdrop from "@/assets/rentals/birthdays/zoo-animals-backdrop.jpg";
+import beautyBeastBackdrop from "@/assets/rentals/birthdays/beauty-beast-backdrop.jpg";
+import butterflyGardenBackdrop from "@/assets/rentals/birthdays/butterfly-garden-backdrop.jpg";
+import cocomelonBackdrop from "@/assets/rentals/birthdays/cocomelon-backdrop.jpg";
 
 interface RentalItem {
   name: string;
@@ -178,6 +181,9 @@ const rentalCategories: Category[] = [
         { name: "Minnie Mouse Theme Backdrop", price: "From $100", image: minnieMouseBackdrop },
         { name: "Princess Jasmine Theme Backdrop", price: "From $100", image: princessJasmineBackdrop },
         { name: "Zoo Animals Theme Backdrop", price: "From $100", image: zooAnimalsBackdrop },
+        { name: "Beauty & The Beast Backdrop", price: "From $100", image: beautyBeastBackdrop },
+        { name: "Butterfly Garden Theme Backdrop", price: "From $100", image: butterflyGardenBackdrop },
+        { name: "Cocomelon Theme Backdrop", price: "From $100", image: cocomelonBackdrop },
       ] },
       { name: "Props", items: [
         { name: "Blue Rabbit Prop", price: "From $55", image: blueRabbitProp },
