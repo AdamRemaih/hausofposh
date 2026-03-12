@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CalendarDays, Heart, Wine, Gift, Sparkles } from "lucide-react";
+import { CalendarDays, Heart, Wine, Gift, Sparkles, Palette, Flower2, Lamp, Star, ClipboardCheck } from "lucide-react";
 
 import serviceWeddings from "@/assets/service-weddings.jpg";
 import serviceCatering from "@/assets/service-catering.jpg";
@@ -66,6 +66,11 @@ const slideInRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 };
 
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
+
 const Services = () => {
   return (
     <div className="min-h-screen pt-20">
@@ -84,37 +89,220 @@ const Services = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-muted-foreground max-w-2xl mx-auto text-lg"
+            className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8"
           >
             We offer a complete range of event decoration services, tailored to make your special moments truly unforgettable.
           </motion.p>
+
+          {/* Two Package Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Button
+              onClick={() => scrollToSection("full-event-design")}
+              className="rounded-full px-8 font-sans tracking-wide text-base"
+              size="lg"
+            >
+              Full Event Design
+            </Button>
+            <Button
+              onClick={() => scrollToSection("day-of-coordination")}
+              variant="outline"
+              className="rounded-full px-8 font-sans tracking-wide text-base"
+              size="lg"
+            >
+              Day-of Coordination
+            </Button>
+          </motion.div>
         </div>
       </section>
 
-      {/* Packages */}
-      <section className="py-20">
+      {/* Service Sections */}
+      <section className="py-24 pb-24">
+        <div className="container mx-auto px-4 space-y-20">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.name}
+              id={service.filter}
+              variants={i % 2 === 0 ? slideInLeft : slideInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              className={`flex flex-col md:flex-row items-center gap-12 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+            >
+              <motion.div
+                className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden group"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </motion.div>
+
+              {/* Content */}
+              <div className="w-full md:w-1/2">
+                <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">{service.name}</h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed">{service.description}</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link to={`/gallery?filter=${service.filter}`}>
+                    <Button variant="outline" className="rounded-full px-6 font-sans tracking-wide">
+                      View Gallery
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button className="rounded-full px-6 font-sans tracking-wide">
+                      Book a Consultation
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Packages Section */}
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Our Packages</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Professional coordination so you can be fully present on your special day.
+              Choose the level of service that fits your vision — from complete creative direction to seamless day-of execution.
             </p>
           </motion.div>
 
+          {/* Full Event Design */}
           <motion.div
+            id="full-event-design"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="border border-border rounded-2xl overflow-hidden mb-12"
+          >
+            <div className="bg-secondary px-8 py-10 text-center">
+              <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Premium Package</p>
+              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-3">Full Event Design</h3>
+              <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
+                From concept to completion, we handle every design detail so your event is a true reflection of your style. Perfect for clients who want a fully curated, hands-off experience.
+              </p>
+            </div>
+
+            <div className="px-6 md:px-10 py-8">
+              <Accordion type="multiple" defaultValue={["consultation", "design", "styling", "logistics"]} className="space-y-2">
+                <AccordionItem value="consultation" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Palette className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Creative Consultation & Concept</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• In-depth consultation to understand your vision, style & preferences</li>
+                      <li>• Custom mood board & color palette creation</li>
+                      <li>• Theme development tailored to your event type</li>
+                      <li>• Venue assessment & spatial design planning</li>
+                      <li>• Curated inspiration presentation with material samples</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="design" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Flower2 className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Full Décor Design & Sourcing</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Complete floral design — ceremony, reception & accents</li>
+                      <li>• Tablescapes, linens, charger plates & place settings</li>
+                      <li>• Backdrop & stage design</li>
+                      <li>• Lighting design & ambiance planning</li>
+                      <li>• Sourcing & coordination of all décor rentals</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="styling" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Lamp className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Setup & Styling</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Full on-site setup & styling by our design team</li>
+                      <li>• Table arrangement & centerpiece placement</li>
+                      <li>• Signage, escort cards & personal touches</li>
+                      <li>• Real-time adjustments for a flawless look</li>
+                      <li>• Complete teardown & rental returns after the event</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="logistics" className="border rounded-xl px-5">
+                  <AccordionTrigger className="hover:no-underline gap-3">
+                    <span className="flex items-center gap-3 text-left">
+                      <Star className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-serif text-lg">Design Management</span>
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>• Dedicated design lead throughout the planning process</li>
+                      <li>• Vendor coordination for all décor-related services</li>
+                      <li>• Timeline integration with your event planner or coordinator</li>
+                      <li>• Final design walkthrough before event day</li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+
+            <div className="bg-secondary/50 px-8 py-10 text-center space-y-6">
+              <div className="flex items-center justify-center gap-2 text-primary">
+                <Sparkles className="h-4 w-4" />
+                <p className="text-sm uppercase tracking-[0.15em] font-medium">The Complete Experience</p>
+                <Sparkles className="h-4 w-4" />
+              </div>
+              <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
+                Ideal for weddings, milestone celebrations, and luxury events where every detail matters. We bring the vision — you bring the guest list.
+              </p>
+              <p className="font-serif text-lg italic">You dream it. We design it.</p>
+              <Link to="/contact">
+                <Button className="rounded-full px-8 mt-2 font-sans tracking-wide">
+                  Book a Consultation
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Day-of Coordination */}
+          <motion.div
+            id="day-of-coordination"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="border border-border rounded-2xl overflow-hidden"
           >
-            {/* Package Header */}
             <div className="bg-secondary px-8 py-10 text-center">
               <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-2">Signature Package</p>
               <h3 className="text-2xl md:text-3xl font-serif font-bold mb-3">Day-of Coordination</h3>
@@ -123,7 +311,6 @@ const Services = () => {
               </p>
             </div>
 
-            {/* Package Details Accordion */}
             <div className="px-6 md:px-10 py-8">
               <Accordion type="multiple" defaultValue={["pre-event", "wedding-day", "reception", "personal"]} className="space-y-2">
                 <AccordionItem value="pre-event" className="border rounded-xl px-5">
@@ -200,7 +387,6 @@ const Services = () => {
               </Accordion>
             </div>
 
-            {/* Why Choose Us + CTA */}
             <div className="bg-secondary/50 px-8 py-10 text-center space-y-6">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Sparkles className="h-4 w-4" />
@@ -218,54 +404,6 @@ const Services = () => {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Service Sections */}
-      <section className="pb-24">
-        <div className="container mx-auto px-4 space-y-20">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.name}
-              id={service.filter}
-              variants={i % 2 === 0 ? slideInLeft : slideInRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              className={`flex flex-col md:flex-row items-center gap-12 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}
-            >
-              <motion.div
-                className="w-full md:w-1/2 aspect-[4/3] rounded-lg overflow-hidden group"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.4 }}
-              >
-                <img
-                  src={service.image}
-                  alt={service.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </motion.div>
-
-              {/* Content */}
-              <div className="w-full md:w-1/2">
-                <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">{service.name}</h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed">{service.description}</p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to={`/gallery?filter=${service.filter}`}>
-                    <Button variant="outline" className="rounded-full px-6 font-sans tracking-wide">
-                      View Gallery
-                    </Button>
-                  </Link>
-                  <Link to="/contact">
-                    <Button className="rounded-full px-6 font-sans tracking-wide">
-                      Book a Consultation
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </section>
     </div>
