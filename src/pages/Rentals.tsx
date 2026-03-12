@@ -140,7 +140,7 @@ const rentalCategories: Category[] = [
     ],
   },
   {
-    name: "Desert Tables",
+    name: "Catering / Desert",
     items: [{ name: "Desert Table Setup", price: "From $120" }, { name: "Candy Cart", price: "From $80" }],
   },
   {
