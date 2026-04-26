@@ -174,7 +174,7 @@ import grad from "@/assets/rentals/graduations/Grad.jpg"
 
 // Gender Reveal / Baby Shower
 
-import babyBlocks from "@/assets/rentals/GenderReveal_BabyShower/BabyBlocks.jpg";
+import babyBlocks from "@/assets/rentals/GenderReveal_BabyShower/babyblocks.jpg";
 import heOrSheRevealBackdrop from "@/assets/rentals/GenderReveal_BabyShower/HeOrSheBackdrop.jpg";
 import BearlyWaitingBabyShowerBackdrop from "@/assets/rentals/GenderReveal_BabyShower/BearlyWaitingBabyShowerBackdrop.jpg"
 import babyLetters from "@/assets/rentals/GenderReveal_BabyShower/BabyLetters.jpeg";
