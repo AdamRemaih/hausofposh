@@ -60,7 +60,7 @@ import roundGoldWhiteChairs from "@/assets/rentals/weddings/round-gold-white-cha
 import scallopWhiteSet from "@/assets/rentals/weddings/scallop-white-set.jpg";
 import whiteVelvetLoveseat from "@/assets/rentals/weddings/white-velvet-loveseat.jpg";
 import taperGoldCandles from "@/assets/rentals/weddings/Gold_Taper_Candles.jpg";
-import taperBlackCandles from "@/assets/rentals/weddings/Black_Taper_Candles.jpg";
+import taperBlackCandles from "@/assets/rentals/weddings/BlackTaperCandles.jpg";
 import hurricaneVases from "@/assets/rentals/weddings/HurricaneVases.jpeg";
 import smallVases from "@/assets/rentals/weddings/SmallVases.jpg";
 import budVases from "@/assets/rentals/weddings/BudVases.jpg";
@@ -79,7 +79,7 @@ import satinlightBlueTableRunner from "@/assets/rentals/weddings/SatinLightBlueT
 import chiffonTableRunnerBlush from "@/assets/rentals/weddings/ChiffonTableRunnerBlush.jpeg";
 import chiffonTableRunnerChampagne from "@/assets/rentals/weddings/ChiffonTableRunnerChampagne.jpeg";
 import chiffonTableRunnerDustyBlue from "@/assets/rentals/weddings/ChiffonTableRunnerDustyBlue.jpeg";
-import chiffonTableRunnerTerracottaOrange from "@/assets/rentals/weddings/chiffonTableRunnerTerracottaOrange.jpg";
+import chiffonTableRunnerTerracottaOrange from "@/assets/rentals/weddings/ChiffonTableRunnerTerracottaOrange.jpg";
 import velvetEmeraldGreenTableRunner from "@/assets/rentals/weddings/VelvetEmeraldGreenTableRunner.jpg";
 import velvetRoyalBlueTableRunner from "@/assets/rentals/weddings/VelvetRoyalBlueTableRunner.jpg";
 import sequinRoseGoldTableRunner from "@/assets/rentals/weddings/SequinRoseGoldTableRunner.jpg";
