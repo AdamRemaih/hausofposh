@@ -73,7 +73,7 @@ import goldLeavesChargerPlate from "@/assets/rentals/weddings/Gold_Leaves_Charge
 import goldBeadedChargerPlate from "@/assets/rentals/weddings/GoldBeadedTrimChargerPlates.jpg";
 import silverChargerPlate from "@/assets/rentals/weddings/SilverBeadedChargerPlate.jpeg";
 import roseGoldChargerPlate from "@/assets/rentals/weddings/RoseGoldBeadedTrimChargerPlate.jpg";
-import satinGoldTableRunner from "@/assets/rentals/weddings/satinGoldTableRunner.jpg";
+import satinGoldTableRunner from "@/assets/rentals/weddings/SatinGoldTableRunner.jpg";
 import satinHotPinkTableRunner from "@/assets/rentals/weddings/SatinHotPinkTableRunner.jpg";
 import satinlightBlueTableRunner from "@/assets/rentals/weddings/SatinLightBlueTableRunner.jpg";
 import chiffonTableRunnerBlush from "@/assets/rentals/weddings/ChiffonTableRunnerBlush.jpeg";
