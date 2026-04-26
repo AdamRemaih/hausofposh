@@ -60,7 +60,7 @@ import roundGoldWhiteChairs from "@/assets/rentals/weddings/round-gold-white-cha
 import scallopWhiteSet from "@/assets/rentals/weddings/scallop-white-set.jpg";
 import whiteVelvetLoveseat from "@/assets/rentals/weddings/white-velvet-loveseat.jpg";
 import taperGoldCandles from "@/assets/rentals/weddings/Gold_Taper_Candles.jpg";
-import taperBlackCandles from "@/assets/rentals/weddings/Black_Taper_Candles.jpg";
+// import taperBlackCandles from "@/assets/rentals/weddings/Black_Taper_Candles.jpg";
 import hurricaneVases from "@/assets/rentals/weddings/HurricaneVases.jpeg";
 import smallVases from "@/assets/rentals/weddings/Smallvases.jpg";
 import budVases from "@/assets/rentals/weddings/BudVases.jpg";
