@@ -169,7 +169,7 @@ import duckProp from "@/assets/rentals/birthdays/DuckProp.jpg";
 
 // Graduation
 import preSchoolGrad from "@/assets/rentals/graduations/PreSchoolGrad.jpg"
-import grad from "@/assets/rentals/graduations/grad.jpg"
+import grad from "@/assets/rentals/graduations/Grad.jpg"
 
 
 // Gender Reveal / Baby Shower
