@@ -16,7 +16,7 @@ const services = [
     name: "Weddings",
     description: "From intimate ceremonies to grand receptions, we craft breathtaking wedding decor that reflects your unique love story. Our designs feature luxurious floral arrangements, elegant drapery, and stunning tablescapes.",
     icon: "💍",
-    filter: "weddings",
+    filter: "weddings-and-engagements",
     image: serviceWeddings,
   },
   {
@@ -213,7 +213,7 @@ const Services = () => {
                   <AccordionContent>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• In-depth consultation to understand your vision, style & preferences</li>
-                      <li>• Custom mood board & color palette creation</li>
+                      <li>• Custom color palette creation</li>
                       <li>• Theme development tailored to your event type</li>
                       <li>• Venue assessment & spatial design planning</li>
                       <li>• Curated inspiration presentation with material samples</li>

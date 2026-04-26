@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-sm text-background/60">
-            © 2026 Haus of Posh. All rights reserved. Designed & developed by Adam Remaih
+            © 2026 Haus of Posh. All rights reserved. Designed & Developed by Adam Remaih
           </p>
         </div>
       </div>
