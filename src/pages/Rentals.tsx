@@ -190,7 +190,7 @@ import whiteChandelier from "@/assets/rentals/lightingsAndHardware/WhiteChandeli
 import goldChandelier from "@/assets/rentals/lightingsAndHardware/GoldChandelier.jpg";
 import fairyLights from "@/assets/rentals/lightingsAndHardware/FairyLights.jpeg";
 import blackLedCafeLights from "@/assets/rentals/lightingsAndHardware/BlackLEDCafeLights.jpg";
-import tenPcGoldHangingLEDLight from "@/assets/rentals/lightingsAndHardware/10PcGoldHangingLedLight.jpg";
+import tenPcGoldHangingLEDLight from "@/assets/rentals/lightingsAndHardware/10PcGoldHangingLEDLight.jpg";
 import graduated10LEDGoldLightStand from "@/assets/rentals/lightingsAndHardware/Graduated10LEDGoldLightStand.jpg";
 import multiColourLEDUplight from "@/assets/rentals/lightingsAndHardware/MultiColourLEDUplight.jpg";
 import roundBackdropStand from "@/assets/rentals/lightingsAndHardware/RoundBackdropStand.jpg";
