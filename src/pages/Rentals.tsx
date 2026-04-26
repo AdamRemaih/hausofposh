@@ -197,8 +197,8 @@ import roundBackdropStand from "@/assets/rentals/lightingsAndHardware/RoundBackd
 import favorDisplayShelf from "@/assets/rentals/lightingsAndHardware/FavorDisplayShelf.jpg";
 
 //Tables
-import serpentineGoldTable from "@/assets/rentals/tables/serpentineGoldTable.jpg";
-import serpentineSilverTable from "@/assets/rentals/tables/serpentineSilverTable.jpeg";
+import serpentineGoldTable from "@/assets/rentals/tables/SerpentineGoldTable.jpg";
+import serpentineSilverTable from "@/assets/rentals/tables/SerpentineSilverTable.jpeg";
 import cocktailTable from "@/assets/rentals/tables/CocktailTable.jpeg";
 import halfMoonTable from "@/assets/rentals/tables/HalfMoonTable.jpg";
 import fourFtTable from "@/assets/rentals/tables/4ft-table.jpg";
