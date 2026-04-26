@@ -174,7 +174,6 @@ const filters = [
   "Baby Showers",
   "Graduations",
   "Birthdays",
-  "Backdrops",
 ];
 
 interface GalleryItem {
