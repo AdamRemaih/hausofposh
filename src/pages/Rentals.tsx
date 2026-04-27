@@ -304,7 +304,7 @@ const rentalCategories: Category[] = [
       
       { name: "Cake Tables", items: [
         { name: "Gold Twist Cake Table (3 Sizes)", price: "From $50", image: cakeTables3Sizes },
-        { name: "Vorage Gold Cake Table", price: "From $250", image: vorageCakeTable },
+        { name: "Gold Twist Cake Table", price: "From $250", image: vorageCakeTable },
         { name: "White Ripple Cake Table", price: "From $400", image: whiteRippleCakeTable },
       ] },
       {
