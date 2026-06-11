@@ -254,7 +254,7 @@ const Services = () => {
                   items: [
                     "Luxury seasonal fruit tray",
                     "Assorted mini dessert cups",
-                    "Cannoli flavors",
+                    "Cannoli, Cream puff, Cream horn",
                     "Mini fruit tarts, eclair, kunafa",
                     "Mini French pastry, full cakes, cheesecake",
                     "Baklava, cream pies / znoud el sit",
