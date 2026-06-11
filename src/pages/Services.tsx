@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -72,6 +73,18 @@ const scrollToSection = (id: string) => {
 };
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
   return (
     <div className="min-h-screen pt-20">
       {/* Hero */}
@@ -156,6 +169,15 @@ const Services = () => {
                       View Gallery
                     </Button>
                   </Link>
+
+                  {service.filter === "catering" && (
+                    <Link to="/services#catering-menu">
+                      <Button variant="outline" className="rounded-full px-6 font-sans tracking-wide">
+                        View Menu
+                      </Button>
+                    </Link>
+                  )}
+
                   <Link to="/contact">
                     <Button className="rounded-full px-6 font-sans tracking-wide">
                       Book a Consultation
@@ -165,6 +187,91 @@ const Services = () => {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      <section id="catering-menu" className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">
+              Catering Menu
+            </h2>
+            <p className="text-muted-foreground">
+              Pita Basket Catering • 3221 Sunridge Way N.E • Halal
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 text-sm text-muted-foreground">
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Savory Items</h3>
+              <ul className="space-y-2">
+                <li>Mini meat, spinach, zaatar & cheese pies</li>
+                <li>Zaatar rolls, sambousik cheese, labneh</li>
+                <li>Mixed vegetable tray, olives, kubbi balls</li>
+                <li>Tabouli / falafel / hummus mini cups</li>
+                <li>Samosa, shrimp cocktail, grape leaves</li>
+                <li>½ sandwich wraps: beef, chicken & falafel</li>
+                <li>Croissant sandwiches with halal cold cut meats</li>
+                <li>Falafel platter, bite-size shawarma & donair</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Main Dishes & Sides</h3>
+              <ul className="space-y-2">
+                <li>Mansaf rice with beef or chicken</li>
+                <li>Butter chicken, roast beef & gravy, brisket</li>
+                <li>Chicken breast with mushroom sauce</li>
+                <li>Vegetarian lasagna, fettuccine Alfredo</li>
+                <li>Mashed potatoes, plain rice, coconut rice</li>
+                <li>Full roasted lamb, lamb shanks, fried chicken</li>
+                <li>Steamed vegetables</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Salads & Dips</h3>
+              <ul className="space-y-2">
+                <li>Fattoush salad, tabouli salad, pasta salad</li>
+                <li>Caesar, Greek & summer salad</li>
+                <li>Hummus, baba ghanouj</li>
+                <li>Spinach dip & baguette</li>
+                <li>Garlic sauce tray</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Desserts</h3>
+              <ul className="space-y-2">
+                <li>Luxury seasonal fruit tray</li>
+                <li>Assorted mini dessert cups</li>
+                <li>Cannoli flavors</li>
+                <li>Mini fruit tarts, eclair, kunafa</li>
+                <li>Mini French pastry, full cakes, cheesecake</li>
+                <li>Baklava, cream pies / znoud el sit</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Stations</h3>
+              <ul className="space-y-2">
+                <li>Coffee station: 100–400 cups</li>
+                <li>Tea station</li>
+                <li>Juice station with crystal beverage dispensers</li>
+                <li>Iced tea, lemonade, fruit punch, pineapple, orange & pink lemonade</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-serif font-bold text-foreground mb-4">Serviceware</h3>
+              <ul className="space-y-2">
+                <li>High-end disposable service for 50–400 guests</li>
+                <li>Dinner plates, forks, knives, spoons</li>
+                <li>Dessert plates, napkins, juice cups</li>
+                <li>Gold, silver and rose gold rim options</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
